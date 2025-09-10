@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b6uhr3wmafejg"]
+[gd_scene load_steps=2 format=3 uid="uid://b6uhr3wmafejg"]
+
+[ext_resource type="Script" uid="uid://ddrrl2t7lljge" path="res://scripts/Menu/main.gd" id="1_6cmvt"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6cmvt")
 
 [node name="Start Game" type="Button" parent="."]
 layout_mode = 1
@@ -57,3 +60,8 @@ anchor_right = 0.6
 anchor_bottom = 0.57
 offset_right = 8.0
 offset_bottom = 8.0
+
+[node name="Tittle" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

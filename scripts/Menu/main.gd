@@ -10,7 +10,6 @@ func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
-
 	if(playbt.button_pressed):
 		print_debug("Play button pressed\n")
 		get_tree().change_scene_to_file("res://scenes/Menu/save_select.tscn")

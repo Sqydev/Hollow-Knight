@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6uhr3wmafejg"]
+[gd_scene load_steps=8 format=3 uid="uid://b6uhr3wmafejg"]
 
 [ext_resource type="Script" uid="uid://ddrrl2t7lljge" path="res://scripts/Menu/main.gd" id="1_6cmvt"]
+[ext_resource type="Texture2D" uid="uid://bnhjahfierrpp" path="res://sprites/Menu/Tittle.png" id="2_3vdeg"]
+[ext_resource type="Texture2D" uid="uid://dpxihqqw3htdv" path="res://sprites/Menu/Voidheart_menu_BG.png" id="2_dat5r"]
+
+[sub_resource type="Gradient" id="Gradient_dat5r"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5g0dw"]
+gradient = SubResource("Gradient_dat5r")
+width = 310
+
+[sub_resource type="Gradient" id="Gradient_5g0dw"]
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rjt2a"]
+gradient = SubResource("Gradient_5g0dw")
+width = 310
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,13 +27,67 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6cmvt")
 
+[node name="BgOfBg" type="ColorRect" parent="."]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.8, 16.2)
+color = Color(0, 0, 0, 1)
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.943
+anchor_right = 1.0
+anchor_bottom = 0.966
+offset_left = 160.0
+offset_top = 465.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("2_dat5r")
+
+[node name="Fade out left" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1, 45)
+texture = SubResource("GradientTexture1D_5g0dw")
+
+[node name="Fade out right" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -310.0
+offset_bottom = 40.0
+grow_horizontal = 0
+scale = Vector2(1, 45)
+texture = SubResource("GradientTexture1D_rjt2a")
+
+[node name="Tittle" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.05
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -318.5
+offset_right = 955.5
+offset_bottom = 521.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_3vdeg")
+
 [node name="Start Game" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
-anchor_top = 0.35
+anchor_top = 0.5
 anchor_right = 0.6
-anchor_bottom = 0.37
+anchor_bottom = 0.53
 offset_right = 8.0
 offset_bottom = 8.0
 
@@ -25,9 +95,9 @@ offset_bottom = 8.0
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
-anchor_top = 0.4
+anchor_top = 0.55
 anchor_right = 0.6
-anchor_bottom = 0.42
+anchor_bottom = 0.58
 offset_right = 8.0
 offset_bottom = 8.0
 
@@ -35,9 +105,9 @@ offset_bottom = 8.0
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
-anchor_top = 0.45
+anchor_top = 0.6
 anchor_right = 0.6
-anchor_bottom = 0.47
+anchor_bottom = 0.63
 offset_right = 8.0
 offset_bottom = 8.0
 
@@ -45,9 +115,9 @@ offset_bottom = 8.0
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
-anchor_top = 0.5
+anchor_top = 0.65
 anchor_right = 0.6
-anchor_bottom = 0.52
+anchor_bottom = 0.68
 offset_right = 8.0
 offset_bottom = 8.0
 
@@ -55,13 +125,8 @@ offset_bottom = 8.0
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
-anchor_top = 0.55
+anchor_top = 0.7
 anchor_right = 0.6
-anchor_bottom = 0.57
+anchor_bottom = 0.73
 offset_right = 8.0
 offset_bottom = 8.0
-
-[node name="Tittle" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0

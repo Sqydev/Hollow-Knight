@@ -41,31 +41,37 @@ color = Color(0, 0, 0, 1)
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 1312.0
-offset_top = 1150.0
+anchor_left = 0.181
+anchor_top = 0.004
+anchor_right = 0.821
+anchor_bottom = 1.0
+offset_left = -0.512009
+offset_top = -0.092
+offset_right = 1310.21
+offset_bottom = 1148.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.36, 0.36)
 texture = ExtResource("2_dat5r")
 
 [node name="Fade out left" type="TextureRect" parent="Background"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.151
+anchor_bottom = 1.004
+offset_right = 0.751984
+offset_bottom = -1761.17
 scale = Vector2(1, 45)
 texture = SubResource("GradientTexture1D_5g0dw")
 
 [node name="Fade out right" type="TextureRect" parent="Background"]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
+anchors_preset = -1
+anchor_left = 0.849
 anchor_right = 1.0
-offset_left = -310.0
-offset_bottom = 40.0
+anchor_bottom = 1.004
+offset_left = -0.752075
+offset_bottom = -1760.17
 grow_horizontal = 0
 scale = Vector2(1, 45)
 texture = SubResource("GradientTexture1D_rjt2a")
@@ -73,12 +79,12 @@ texture = SubResource("GradientTexture1D_rjt2a")
 [node name="Tittle" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.1
-offset_left = -318.5
-offset_right = 955.5
-offset_bottom = 521.0
+anchor_left = 0.224
+anchor_right = 0.776
+anchor_bottom = 0.452
+offset_left = -0.548004
+offset_right = 637.548
+offset_bottom = 292.904
 grow_horizontal = 2
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_3vdeg")
@@ -88,47 +94,49 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
 anchor_top = 0.5
-anchor_right = 0.6
-anchor_bottom = 0.53
-offset_right = 8.0
-offset_bottom = 8.0
+anchor_right = 0.607
+anchor_bottom = 0.542
+offset_right = -0.0640259
+offset_bottom = 0.223938
 
 [node name="Options" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
 anchor_top = 0.55
-anchor_right = 0.6
-anchor_bottom = 0.58
-offset_right = 8.0
-offset_bottom = 8.0
+anchor_right = 0.607
+anchor_bottom = 0.592
+offset_right = -0.0640259
+offset_bottom = 0.223999
 
 [node name="Advancments" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
 anchor_top = 0.6
-anchor_right = 0.6
-anchor_bottom = 0.63
-offset_right = 8.0
-offset_bottom = 8.0
+anchor_right = 0.607
+anchor_bottom = 0.642
+offset_right = -0.0640259
+offset_bottom = 0.223969
 
 [node name="Extras" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
 anchor_top = 0.65
-anchor_right = 0.6
-anchor_bottom = 0.68
-offset_right = 8.0
-offset_bottom = 8.0
+anchor_right = 0.607
+anchor_bottom = 0.692
+offset_top = -3.05176e-05
+offset_right = -0.0640259
+offset_bottom = 0.223999
 
 [node name="Quit Game" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
 anchor_top = 0.7
-anchor_right = 0.6
-anchor_bottom = 0.73
-offset_right = 8.0
-offset_bottom = 8.0
+anchor_right = 0.607
+anchor_bottom = 0.742
+offset_top = -3.05176e-05
+offset_right = -0.0640259
+offset_bottom = 0.223969

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcpgni21ded56"]
+
+[ext_resource type="PackedScene" uid="uid://bav3p7gnnq25s" path="res://scenes/Feature specific/Scene_Chainge_Triger.tscn" id="1_yppg6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8ip2"]
+
+[node name="TriggetTest" type="Node2D"]
+
+[node name="SceneChaingeTriger" parent="." instance=ExtResource("1_yppg6")]
+
+[node name="Test_Player" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Test_Player"]
+shape = SubResource("RectangleShape2D_w8ip2")

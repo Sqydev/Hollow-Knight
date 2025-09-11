@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bav3p7gnnq25s"]
+
+[ext_resource type="Script" uid="uid://cpe6en8sgjj21" path="res://scripts/Scene_Triggers/SceneChaingeTrigger.gd" id="1_5awu1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5awu1"]
+
+[node name="SceneChaingeTriger" type="Node2D"]
+script = ExtResource("1_5awu1")
+metadata/To_Scene = NodePath("UWU")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_5awu1")

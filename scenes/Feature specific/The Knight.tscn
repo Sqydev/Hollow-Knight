@@ -4,6 +4,7 @@
 size = Vector2(33, 80)
 
 [node name="The Knight" type="CharacterBody2D"]
+metadata/SendFromId = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6.5, 30)

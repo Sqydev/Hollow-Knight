@@ -97,7 +97,8 @@ anchor_top = 0.5
 anchor_right = 0.607
 anchor_bottom = 0.542
 offset_right = -0.0640259
-offset_bottom = 0.223938
+offset_bottom = 3.784
+text = "Start Game"
 
 [node name="Options" type="Button" parent="."]
 layout_mode = 1
@@ -107,7 +108,8 @@ anchor_top = 0.55
 anchor_right = 0.607
 anchor_bottom = 0.592
 offset_right = -0.0640259
-offset_bottom = 0.223999
+offset_bottom = 3.784
+text = "Options"
 
 [node name="Advancments" type="Button" parent="."]
 layout_mode = 1
@@ -117,7 +119,8 @@ anchor_top = 0.6
 anchor_right = 0.607
 anchor_bottom = 0.642
 offset_right = -0.0640259
-offset_bottom = 0.223969
+offset_bottom = 3.784
+text = "Advancments"
 
 [node name="Extras" type="Button" parent="."]
 layout_mode = 1
@@ -128,7 +131,8 @@ anchor_right = 0.607
 anchor_bottom = 0.692
 offset_top = -3.05176e-05
 offset_right = -0.0640259
-offset_bottom = 0.223999
+offset_bottom = 3.78397
+text = "Extras"
 
 [node name="Quit Game" type="Button" parent="."]
 layout_mode = 1
@@ -139,4 +143,5 @@ anchor_right = 0.607
 anchor_bottom = 0.742
 offset_top = -3.05176e-05
 offset_right = -0.0640259
-offset_bottom = 0.223969
+offset_bottom = 3.784
+text = "Quit Game"

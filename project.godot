@@ -14,3 +14,8 @@ config/name="Hollow Knight Clone"
 run/main_scene="uid://b6uhr3wmafejg"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"

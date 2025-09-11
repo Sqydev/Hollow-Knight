@@ -1,0 +1,173 @@
+[gd_scene load_steps=10 format=3 uid="uid://dy2jvxvw4hjx6"]
+
+[ext_resource type="Texture2D" uid="uid://cwu115fjb0ftw" path="res://sprites/shaw-for-reference.jpg" id="1_xq0nl"]
+[ext_resource type="Texture2D" uid="uid://bq6aptrixplje" path="res://sprites/platform-placeholder.jpg" id="2_bisdn"]
+[ext_resource type="AudioStream" uid="uid://6be4iqyoemqo" path="res://audio/test.mp3" id="2_nuom0"]
+[ext_resource type="Texture2D" uid="uid://chiko13xgi2vp" path="res://sprites/hurtobjects_placeholder.png" id="3_omc5j"]
+[ext_resource type="Texture2D" uid="uid://c16w7ngc0pl4r" path="res://sprites/killobjects-placeholder.webp" id="4_o3056"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58frx"]
+size = Vector2(274.363, 178.901)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mf2qp"]
+size = Vector2(124, 248)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spqep"]
+size = Vector2(949, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ryl3"]
+size = Vector2(37, 241)
+
+[node name="Scene" type="Node2D"]
+
+[node name="Shaw-for-reference" type="Sprite2D" parent="."]
+position = Vector2(131, 156)
+scale = Vector2(0.242138, 0.242138)
+texture = ExtResource("1_xq0nl")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Shaw-for-reference"]
+position = Vector2(-541.013, -644.26)
+scale = Vector2(4.12987, 4.12987)
+stream = ExtResource("2_nuom0")
+autoplay = true
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="Platform" type="StaticBody2D" parent="Platforms"]
+position = Vector2(152.75, 254.25)
+scale = Vector2(1.10073, 0.245946)
+
+[node name="Placeholder" type="Sprite2D" parent="Platforms/Platform"]
+scale = Vector2(1, 1)
+texture = ExtResource("2_bisdn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform"]
+position = Vector2(-1.58983, -1.01648)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_58frx")
+
+[node name="Platform" type="StaticBody2D" parent="Platforms/Platform"]
+position = Vector2(1814.47, -566.181)
+rotation = 0.78242
+scale = Vector2(4.09208, 3.73758)
+
+[node name="Placeholder" type="Sprite2D" parent="Platforms/Platform/Platform"]
+scale = Vector2(1, 1)
+texture = ExtResource("2_bisdn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform/Platform"]
+position = Vector2(-1.58983, -1.01648)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_58frx")
+
+[node name="Platform2" type="StaticBody2D" parent="Platforms"]
+position = Vector2(583, 588)
+scale = Vector2(4.25161, 0.700494)
+
+[node name="Placeholder" type="Sprite2D" parent="Platforms/Platform2"]
+scale = Vector2(1, 1)
+texture = ExtResource("2_bisdn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform2"]
+position = Vector2(-1.58983, -1.01648)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_58frx")
+
+[node name="Platform3" type="StaticBody2D" parent="Platforms"]
+position = Vector2(15, 399)
+rotation = 4.71239
+scale = Vector2(0.919889, 0.172284)
+
+[node name="Placeholder" type="Sprite2D" parent="Platforms/Platform3"]
+scale = Vector2(1, 1)
+texture = ExtResource("2_bisdn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform3"]
+position = Vector2(-1.58983, -1.01648)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_58frx")
+
+[node name="Platform4" type="StaticBody2D" parent="Platforms"]
+position = Vector2(1043, -44)
+scale = Vector2(7.55622, 0.490692)
+
+[node name="Placeholder" type="Sprite2D" parent="Platforms/Platform4"]
+scale = Vector2(1, 1)
+texture = ExtResource("2_bisdn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform4"]
+position = Vector2(-1.58983, -1.01648)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_58frx")
+
+[node name="Platform4" type="StaticBody2D" parent="Platforms/Platform4"]
+position = Vector2(116.196, 1495.85)
+scale = Vector2(0.393917, 3.91443)
+
+[node name="Placeholder" type="Sprite2D" parent="Platforms/Platform4/Platform4"]
+scale = Vector2(1, 1)
+texture = ExtResource("2_bisdn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform4/Platform4"]
+position = Vector2(-1.58983, -1.01648)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_58frx")
+
+[node name="HurtObjects" type="Node2D" parent="."]
+
+[node name="HurtObject" type="StaticBody2D" parent="HurtObjects"]
+position = Vector2(529, 108)
+scale = Vector2(1, 0.800001)
+
+[node name="HurtobjectsPlaceholder" type="Sprite2D" parent="HurtObjects/HurtObject"]
+position = Vector2(-2, -2)
+scale = Vector2(0.269056, 0.240001)
+texture = ExtResource("3_omc5j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtObjects/HurtObject"]
+position = Vector2(-3, -10)
+shape = SubResource("RectangleShape2D_mf2qp")
+debug_color = Color(0.88264, 0.335342, 0, 0.42)
+
+[node name="KillObjects" type="Node2D" parent="."]
+
+[node name="KillObject" type="StaticBody2D" parent="KillObjects"]
+position = Vector2(716, 469)
+scale = Vector2(0.36, 0.36)
+
+[node name="Killobjects-placeholder" type="Sprite2D" parent="KillObjects/KillObject"]
+position = Vector2(1711, 549)
+texture = ExtResource("4_o3056")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillObjects/KillObject"]
+position = Vector2(1710.5, 547)
+shape = SubResource("RectangleShape2D_spqep")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 40.0
+offset_top = -435.0
+offset_right = 80.0
+offset_bottom = -395.0
+scale = Vector2(4.13026, 4.06344)
+text = "TO TYLKO REFERENCJA DO SYSTEMÓW DAMAGE I MOVEMENTU"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Teleports" type="Node2D" parent="."]
+
+[node name="Exit0" type="StaticBody2D" parent="Teleports"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleports/Exit0"]
+position = Vector2(18.5, 110.5)
+shape = SubResource("RectangleShape2D_8ryl3")
+debug_color = Color(0.718783, 0.251564, 1, 0.42)
+
+[node name="Exit1" type="StaticBody2D" parent="Teleports"]
+position = Vector2(2292, 283)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleports/Exit1"]
+position = Vector2(18.5, 110.5)
+shape = SubResource("RectangleShape2D_8ryl3")
+debug_color = Color(0.718783, 0.251564, 1, 0.42)

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3op51ek2hu76"]
+
+[ext_resource type="Script" uid="uid://cnlfrl6vh38lf" path="res://scripts/Scene_Triggers/SceneChaingeTrigger/SceneChaingeDestination.gd" id="1_dd5ff"]
+[ext_resource type="Script" uid="uid://60shcawh77pa" path="res://scripts/Scene_Triggers/Fame.gd" id="2_0500n"]
+
+[node name="SceneChaingeDestination" type="Node2D"]
+script = ExtResource("1_dd5ff")
+metadata/ReciveId = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("2_0500n")

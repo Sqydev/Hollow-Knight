@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://dy2jvxvw4hjx6"]
+[gd_scene load_steps=12 format=3 uid="uid://dy2jvxvw4hjx6"]
 
 [ext_resource type="Texture2D" uid="uid://cwu115fjb0ftw" path="res://sprites/shaw-for-reference.jpg" id="1_xq0nl"]
 [ext_resource type="Texture2D" uid="uid://bq6aptrixplje" path="res://sprites/platform-placeholder.jpg" id="2_bisdn"]
 [ext_resource type="AudioStream" uid="uid://6be4iqyoemqo" path="res://audio/test.mp3" id="2_nuom0"]
 [ext_resource type="Texture2D" uid="uid://chiko13xgi2vp" path="res://sprites/hurtobjects_placeholder.png" id="3_omc5j"]
 [ext_resource type="Texture2D" uid="uid://c16w7ngc0pl4r" path="res://sprites/killobjects-placeholder.webp" id="4_o3056"]
+[ext_resource type="PackedScene" uid="uid://bav3p7gnnq25s" path="res://scenes/Feature specific/Scene Chainge Trigger/Scene_Chainge_Triger.tscn" id="6_omc5j"]
+[ext_resource type="PackedScene" uid="uid://b3op51ek2hu76" path="res://scenes/Feature specific/Scene Chainge Trigger/Scene_Chainge_Destination.tscn" id="7_o3056"]
+[ext_resource type="PackedScene" uid="uid://lcsav7etsjby" path="res://scenes/Feature specific/The Knight.tscn" id="8_0f1sl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_58frx"]
 size = Vector2(274.363, 178.901)
@@ -15,10 +18,8 @@ size = Vector2(124, 248)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spqep"]
 size = Vector2(949, 400)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ryl3"]
-size = Vector2(37, 241)
-
 [node name="Scene" type="Node2D"]
+scale = Vector2(0.231182, 0.231182)
 
 [node name="Shaw-for-reference" type="Sprite2D" parent="."]
 position = Vector2(131, 156)
@@ -38,12 +39,10 @@ position = Vector2(152.75, 254.25)
 scale = Vector2(1.10073, 0.245946)
 
 [node name="Placeholder" type="Sprite2D" parent="Platforms/Platform"]
-scale = Vector2(1, 1)
 texture = ExtResource("2_bisdn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform"]
 position = Vector2(-1.58983, -1.01648)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_58frx")
 
 [node name="Platform" type="StaticBody2D" parent="Platforms/Platform"]
@@ -52,12 +51,10 @@ rotation = 0.78242
 scale = Vector2(4.09208, 3.73758)
 
 [node name="Placeholder" type="Sprite2D" parent="Platforms/Platform/Platform"]
-scale = Vector2(1, 1)
 texture = ExtResource("2_bisdn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform/Platform"]
 position = Vector2(-1.58983, -1.01648)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_58frx")
 
 [node name="Platform2" type="StaticBody2D" parent="Platforms"]
@@ -65,12 +62,10 @@ position = Vector2(583, 588)
 scale = Vector2(4.25161, 0.700494)
 
 [node name="Placeholder" type="Sprite2D" parent="Platforms/Platform2"]
-scale = Vector2(1, 1)
 texture = ExtResource("2_bisdn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform2"]
 position = Vector2(-1.58983, -1.01648)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_58frx")
 
 [node name="Platform3" type="StaticBody2D" parent="Platforms"]
@@ -79,12 +74,10 @@ rotation = 4.71239
 scale = Vector2(0.919889, 0.172284)
 
 [node name="Placeholder" type="Sprite2D" parent="Platforms/Platform3"]
-scale = Vector2(1, 1)
 texture = ExtResource("2_bisdn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform3"]
 position = Vector2(-1.58983, -1.01648)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_58frx")
 
 [node name="Platform4" type="StaticBody2D" parent="Platforms"]
@@ -92,12 +85,10 @@ position = Vector2(1043, -44)
 scale = Vector2(7.55622, 0.490692)
 
 [node name="Placeholder" type="Sprite2D" parent="Platforms/Platform4"]
-scale = Vector2(1, 1)
 texture = ExtResource("2_bisdn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform4"]
 position = Vector2(-1.58983, -1.01648)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_58frx")
 
 [node name="Platform4" type="StaticBody2D" parent="Platforms/Platform4"]
@@ -105,12 +96,10 @@ position = Vector2(116.196, 1495.85)
 scale = Vector2(0.393917, 3.91443)
 
 [node name="Placeholder" type="Sprite2D" parent="Platforms/Platform4/Platform4"]
-scale = Vector2(1, 1)
 texture = ExtResource("2_bisdn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform4/Platform4"]
 position = Vector2(-1.58983, -1.01648)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_58frx")
 
 [node name="HurtObjects" type="Node2D" parent="."]
@@ -150,24 +139,28 @@ offset_top = -435.0
 offset_right = 80.0
 offset_bottom = -395.0
 scale = Vector2(4.13026, 4.06344)
-text = "TO TYLKO REFERENCJA DO SYSTEMÓW DAMAGE I MOVEMENTU"
+text = "TO TYLKO REFERENCJA DO SYSTEMÓW DAMAGE, MOVEMENTU I INNYCH"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
 [node name="Teleports" type="Node2D" parent="."]
 
-[node name="Exit0" type="StaticBody2D" parent="Teleports"]
+[node name="SceneChaingeTriger" parent="Teleports" instance=ExtResource("6_omc5j")]
+position = Vector2(2296.9, 384.979)
+scale = Vector2(1, 13.1117)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleports/Exit0"]
-position = Vector2(18.5, 110.5)
-shape = SubResource("RectangleShape2D_8ryl3")
-debug_color = Color(0.718783, 0.251564, 1, 0.42)
+[node name="SceneChaingeDestination" parent="Teleports" instance=ExtResource("7_o3056")]
+position = Vector2(129.768, 138.419)
+scale = Vector2(4.13026, 4.06344)
 
-[node name="Exit1" type="StaticBody2D" parent="Teleports"]
-position = Vector2(2292, 283)
+[node name="SceneChaingeTriger2" parent="Teleports" instance=ExtResource("6_omc5j")]
+position = Vector2(17.3024, 112.466)
+scale = Vector2(1.38903, 11.2812)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleports/Exit1"]
-position = Vector2(18.5, 110.5)
-shape = SubResource("RectangleShape2D_8ryl3")
-debug_color = Color(0.718783, 0.251564, 1, 0.42)
+[node name="SceneChaingeDestination2" parent="Teleports" instance=ExtResource("7_o3056")]
+position = Vector2(2188.75, 372.002)
+scale = Vector2(1.38903, 11.2812)
+
+[node name="The Knight" parent="." instance=ExtResource("8_0f1sl")]
+position = Vector2(233.583, 77.8608)

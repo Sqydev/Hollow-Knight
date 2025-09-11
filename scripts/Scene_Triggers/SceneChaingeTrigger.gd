@@ -1,17 +1,24 @@
 extends Node2D
 
 @onready var Trigger = $Area2D
+@onready var Fame = $CanvasLayer/ColorRect
 
 func _ready() -> void:
+	await Fame.fade_in(0.5)
 	Trigger.body_entered.connect(FilterToPlayer)
 
 func _process(delta: float) -> void:
 	pass
 
 func FilterToPlayer(body):
-	var NewScene = get_tree().get_meta("To Scene")
+	if body.name != "The Knight":
+		return
 	
-	if(body.name == "The Knight" || body.name == "Test_Player"):
+	var NewScene = "res://scenes/" + self.get_meta("ToScene") + ".tscn"
+	
+	if(body.name == "The Knight"):
 		print_debug("Scene_Change to: ", NewScene)
 		
-		#get_tree().change_scene_to_file("")
+		await Fame.fade_out(0.5)
+		
+		get_tree().change_scene_to_file(NewScene)

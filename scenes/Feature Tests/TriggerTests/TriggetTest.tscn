@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcpgni21ded56"]
+
+[ext_resource type="PackedScene" uid="uid://bav3p7gnnq25s" path="res://scenes/Feature specific/Scene_Chainge_Triger.tscn" id="1_yppg6"]
+[ext_resource type="PackedScene" uid="uid://lcsav7etsjby" path="res://scenes/Feature specific/The Knight.tscn" id="2_w8ip2"]
+
+[node name="TriggetTest" type="Node2D"]
+
+[node name="The Knight" parent="." instance=ExtResource("2_w8ip2")]
+position = Vector2(464, 259)
+
+[node name="SceneChaingeTriger" parent="." instance=ExtResource("1_yppg6")]
+position = Vector2(468, 276)
+metadata/ToScene = &"Feature Tests/TriggerTests/TriggerTest2"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 658.0
+offset_top = 247.0
+offset_right = 698.0
+offset_bottom = 287.0

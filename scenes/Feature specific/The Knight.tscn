@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://lcsav7etsjby"]
+[gd_scene load_steps=2 format=3 uid="uid://lcsav7etsjby"]
 
-[node name="TheKnight" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a1bvk"]
+size = Vector2(33, 80)
+
+[node name="The Knight" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.5, 30)
+shape = SubResource("RectangleShape2D_a1bvk")

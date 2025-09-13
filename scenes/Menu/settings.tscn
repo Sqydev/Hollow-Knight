@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cunw6tmkxhmdi"]
+[gd_scene load_steps=3 format=3 uid="uid://cunw6tmkxhmdi"]
 
 [ext_resource type="Script" uid="uid://cvnm7oqypt73b" path="res://scripts/Menu/settings.gd" id="1_sogl8"]
+[ext_resource type="PackedScene" uid="uid://dfdxq0eh7koi1" path="res://scenes/Menu/Backgrounds/MenuBackground.tscn" id="2_5ph7n"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -10,3 +11,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sogl8")
+
+[node name="MenuBackground" parent="." instance=ExtResource("2_5ph7n")]
+layout_mode = 1

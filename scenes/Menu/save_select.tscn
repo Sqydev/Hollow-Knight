@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5rwlsom2sgta"]
+[gd_scene load_steps=3 format=3 uid="uid://b5rwlsom2sgta"]
 
 [ext_resource type="Script" uid="uid://c8u6wmv13b8vw" path="res://scripts/Menu/save_select.gd" id="1_j241m"]
+[ext_resource type="PackedScene" uid="uid://dfdxq0eh7koi1" path="res://scenes/Menu/Backgrounds/MenuBackground.tscn" id="2_cprun"]
 
 [node name="SaveSelect" type="Control"]
 layout_mode = 3
@@ -10,3 +11,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_j241m")
+
+[node name="MenuBackground" parent="." instance=ExtResource("2_cprun")]
+layout_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.17
+anchor_right = 0.7
+anchor_bottom = 0.25
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SAVE TEST"

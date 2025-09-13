@@ -1,22 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6uhr3wmafejg"]
+[gd_scene load_steps=4 format=3 uid="uid://b6uhr3wmafejg"]
 
 [ext_resource type="Script" uid="uid://ddrrl2t7lljge" path="res://scripts/Menu/main.gd" id="1_6cmvt"]
 [ext_resource type="Texture2D" uid="uid://bnhjahfierrpp" path="res://sprites/Menu/Tittle.png" id="2_3vdeg"]
-[ext_resource type="Texture2D" uid="uid://dpxihqqw3htdv" path="res://sprites/Menu/Voidheart_menu_BG.png" id="2_dat5r"]
-
-[sub_resource type="Gradient" id="Gradient_dat5r"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_5g0dw"]
-gradient = SubResource("Gradient_dat5r")
-width = 310
-
-[sub_resource type="Gradient" id="Gradient_5g0dw"]
-colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_rjt2a"]
-gradient = SubResource("Gradient_5g0dw")
-width = 310
+[ext_resource type="PackedScene" uid="uid://dfdxq0eh7koi1" path="res://scenes/Menu/Backgrounds/MenuBackground.tscn" id="2_dat5r"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -28,53 +14,8 @@ grow_vertical = 2
 size_flags_stretch_ratio = 2.01
 script = ExtResource("1_6cmvt")
 
-[node name="BgOfBg" type="ColorRect" parent="."]
+[node name="MenuBackground" parent="." instance=ExtResource("2_dat5r")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(28.8, 16.2)
-color = Color(0, 0, 0, 1)
-
-[node name="Background" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.181
-anchor_top = 0.004
-anchor_right = 0.821
-anchor_bottom = 1.0
-offset_left = -0.512009
-offset_top = -0.092
-offset_right = 1310.21
-offset_bottom = 1148.5
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.36, 0.36)
-texture = ExtResource("2_dat5r")
-
-[node name="Fade out left" type="TextureRect" parent="Background"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.151
-anchor_bottom = 1.004
-offset_right = 0.751984
-offset_bottom = -1761.17
-scale = Vector2(1, 45)
-texture = SubResource("GradientTexture1D_5g0dw")
-
-[node name="Fade out right" type="TextureRect" parent="Background"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.849
-anchor_right = 1.0
-anchor_bottom = 1.004
-offset_left = -0.752075
-offset_bottom = -1760.17
-grow_horizontal = 0
-scale = Vector2(1, 45)
-texture = SubResource("GradientTexture1D_rjt2a")
 
 [node name="Tittle" type="TextureRect" parent="."]
 layout_mode = 1

@@ -1,18 +1,14 @@
 extends Node
+class_name SaveSystem
 
 var SaveFolder
 var FileSlotGlob
 
-func readySave(Mode, FileSlot):
+func DoSaveOperation(Mode, FileSlot):
 	var KelnerOfUser = OS.get_name();
-	FileSlotGlob = FileSlot
+	FileSlotGlob = str(FileSlot)
 	
-	if(KelnerOfUser == "Windows"):
-		SaveFolder = "user://HollowKnightRecreation/";
-	elif(KelnerOfUser == "Linux"):
-		SaveFolder = "~/.local/HollowKnightRecreation/";
-	else:
-		print("Os unsuported");
+	SaveFolder = "user://HollowKnightRecreation/";
 	
 	if(Mode == 0):
 		ScanSave();
@@ -29,26 +25,27 @@ func readySave(Mode, FileSlot):
 func ScanSave():
 	if(FileAccess.file_exists(SaveFolder + FileSlotGlob + ".SAVE")):
 		# File does exist
+		print_debug("Save exists")
 		return 0;
 	else:
 		# File does NOT exist
+		print_debug("Save dont")
 		return 1;
 
 func NewFile():
 	if(DirAccess.open(SaveFolder) == null):
-		DirAccess.make_dir_absolute(SaveFolder);
-		NewFile();
-	else:
-		var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.WRITE);
-		if(file != null):
-			# Room
-			file.store_string("NULL")
-			file.store_string("\n")
-			# Bench Id
-			file.store_string("NULL")
-			file.store_string("\n")
-			
-			file.close()
+		DirAccess.make_dir_recursive_absolute(SaveFolder);
+		
+	var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.WRITE);
+	if(file != null):
+		# Room
+		file.store_string("NULL")
+		file.store_string("\n")
+		# Bench Id
+		file.store_string("NULL")
+		file.store_string("\n")
+		
+		file.close()
 
 func OpenSave():
 	var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.READ)

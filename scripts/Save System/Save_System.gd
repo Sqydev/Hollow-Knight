@@ -14,7 +14,9 @@ func readySave(Mode, FileSlot):
 	else:
 		print("Os unsuported");
 	
-	if(Mode == 1):
+	if(Mode == 0):
+		ScanSave();
+	elif(Mode == 1):
 		NewFile();
 		OpenSave();
 	elif(Mode == 2):
@@ -24,18 +26,44 @@ func readySave(Mode, FileSlot):
 	elif(Mode == 4):
 		DeleteFile();
 
+func ScanSave():
+	if(FileAccess.file_exists(SaveFolder + FileSlotGlob + ".SAVE")):
+		# File does exist
+		return 0;
+	else:
+		# File does NOT exist
+		return 1;
+
 func NewFile():
 	if(DirAccess.open(SaveFolder) == null):
 		DirAccess.make_dir_absolute(SaveFolder);
 		NewFile();
 	else:
-		var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVETHEWORLD", FileAccess.WRITE);
+		var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.WRITE);
 		if(file != null):
-			file.store_string("NEWFILE;")
+			# Room
+			file.store_string("NULL")
+			file.store_string("\n")
+			# Bench Id
+			file.store_string("NULL")
+			file.store_string("\n")
+			
 			file.close()
 
 func OpenSave():
-	pass
+	var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.READ)
+	if(file != null):
+		var Line = 0
+		
+		var Save_Scene
+		
+		
+		while(!file.eof_reached()):
+			switch
+			
+			Line += 1
+		
+		get_tree().change_scene_to_file(Save_Scene);
 
 func SaveFile():
 	pass;

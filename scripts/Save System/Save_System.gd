@@ -41,7 +41,7 @@ func NewFile():
 	var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.WRITE);
 	if(file != null):
 		# Room
-		file.store_string("res://scenes/Feature Tests/SaveSystem/save_selectTEST.tscn")
+		file.store_string("res://scenes/Game/Root.tscn")
 		file.store_string("\n")
 		# Bench Id
 		file.store_string("NULL")
@@ -83,7 +83,7 @@ func SaveFile():
 	var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.WRITE)
 	if(file != null):
 		# Zapisz pokój
-		file.overwrite_line(SaveFolder + FileSlotGlob + ".SAVE", 0, "res://scenes/Menu/main.tscn")
+		file.overwrite_line(SaveFolder + FileSlotGlob + ".SAVE", 0, tree.current_scene)
 		
 		file.close()
 

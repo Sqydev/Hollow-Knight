@@ -33,7 +33,7 @@ func ScanSave():
 		return 1;
 
 # Działa 100%
-# TODO: Jak misiu zrobi główną scenę to usuń to "res://scenes/Menu/main.tscn"
+# TODO: Jak misiu zrobi główną scenę to usuń to "res://scenes/Menu/main.tscn" czy inne takie
 func NewFile():
 	if(DirAccess.open(SaveFolder) == null):
 		DirAccess.make_dir_recursive_absolute(SaveFolder);
@@ -41,7 +41,7 @@ func NewFile():
 	var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.WRITE);
 	if(file != null):
 		# Room
-		file.store_string("res://scenes/Menu/main.tscn")
+		file.store_string("res://scenes/Feature Tests/SaveSystem/save_selectTEST.tscn")
 		file.store_string("\n")
 		# Bench Id
 		file.store_string("NULL")
@@ -49,10 +49,13 @@ func NewFile():
 		
 		file.close()
 
-# Nie działa:(
+# Działa!!!
 func OpenSave():
 	var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.READ)
 	if(file != null):
+		# Get tree of project to chainge scenes(cuz it's not any object)
+		var tree = Engine.get_main_loop() as SceneTree
+		
 		var LineLocation = 1
 		var LineContent
 		
@@ -63,7 +66,7 @@ func OpenSave():
 			match(LineLocation):
 				1:
 					print_debug("Chainging scene to: ", LineContent)
-					get_tree().change_scene_to_file(LineContent);
+					tree.change_scene_to_file(LineContent);
 				2:
 					# TODO: Jak będą ławeczki to zrób savowanie jaka
 					pass
@@ -74,10 +77,13 @@ func OpenSave():
 
 # TODO: Sprawdz czy działa
 func SaveFile():
+	# Get tree of project to chainge scenes(cuz it's not any object)
+	var tree = Engine.get_main_loop() as SceneTree
+	
 	var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.WRITE)
 	if(file != null):
 		# Zapisz pokój
-		file.overwrite_line(SaveFolder + FileSlotGlob + ".SAVE", 0, get_tree().current_scene)
+		file.overwrite_line(SaveFolder + FileSlotGlob + ".SAVE", 0, "res://scenes/Menu/main.tscn")
 		
 		file.close()
 

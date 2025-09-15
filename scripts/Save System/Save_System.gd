@@ -53,17 +53,19 @@ func NewFile():
 func OpenSave():
 	var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.READ)
 	if(file != null):
-		var Line = 0
-		
-		var Save_Scene
-		
+		var LineLocation = 1
+		var LineContent
 		
 		while(!file.eof_reached()):
-			switch
+			LineContent = file.get_line()
 			
-			Line += 1
-		
-		get_tree().change_scene_to_file(Save_Scene);
+			match(LineLocation):
+				1:
+					get_tree().change_scene_to_file(LineContent);
+				2:
+					pass
+					
+			LineLocation += 1
 
 func SaveFile():
 	pass;

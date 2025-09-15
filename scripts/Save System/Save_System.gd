@@ -59,16 +59,26 @@ func OpenSave():
 		while(!file.eof_reached()):
 			LineContent = file.get_line()
 			
+			# Patrz na linie i każda linia za coś odpowiada(Patrz NewFile())
 			match(LineLocation):
 				1:
 					get_tree().change_scene_to_file(LineContent);
 				2:
+					# TODO: Jak będą ławeczki to zrób savowanie jaka
 					pass
 					
 			LineLocation += 1
+		
+		file.close()
 
 func SaveFile():
-	pass;
+	var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.WRITE)
+	if(file != null):
+		# Zapisz pokój
+		file.overwrite_line(SaveFolder + FileSlotGlob + ".SAVE", 0, get_tree().current_scene)
+		
+		file.close()
 
 func DeleteFile():
-	pass;
+	# Delete save
+	DirAccess.remove_absolute(SaveFolder + FileSlotGlob + ".SAVE")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c16w7ngc0pl4r"
-path="res://.godot/imported/killobjects-placeholder.webp-d009aec3f1f40c237fea54704d384ed8.ctex"
+uid="uid://cwu115fjb0ftw"
+path="res://.godot/imported/shaw-for-reference.jpg-f646168baa35a789330ef733c1d59435.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/killobjects-placeholder.webp"
-dest_files=["res://.godot/imported/killobjects-placeholder.webp-d009aec3f1f40c237fea54704d384ed8.ctex"]
+source_file="res://sprites/placeholders/shaw-for-reference.jpg"
+dest_files=["res://.godot/imported/shaw-for-reference.jpg-f646168baa35a789330ef733c1d59435.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq6aptrixplje"
-path="res://.godot/imported/platform-placeholder.jpg-03cec38d5dafee446d23f1001212566b.ctex"
+uid="uid://chiko13xgi2vp"
+path="res://.godot/imported/hurtobjects_placeholder.png-fb9c17c68b58a087ea0922ff60bed263.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/platform-placeholder.jpg"
-dest_files=["res://.godot/imported/platform-placeholder.jpg-03cec38d5dafee446d23f1001212566b.ctex"]
+source_file="res://sprites/placeholders/hurtobjects_placeholder.png"
+dest_files=["res://.godot/imported/hurtobjects_placeholder.png-fb9c17c68b58a087ea0922ff60bed263.ctex"]
 
 [params]
 

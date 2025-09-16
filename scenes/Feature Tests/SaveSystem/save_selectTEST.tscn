@@ -99,4 +99,4 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "SAVE save TEST"
 script = ExtResource("3_ibr6a")
-metadata/META = 3
+metadata/meta = 3

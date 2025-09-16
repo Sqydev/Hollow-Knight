@@ -14,3 +14,15 @@ script = ExtResource("1_j241m")
 
 [node name="MenuBackground" parent="." instance=ExtResource("2_cprun")]
 layout_mode = 1
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 187.0
+offset_right = 439.0
+offset_bottom = 224.0

@@ -17,9 +17,10 @@ func DoSaveOperation(Mode, FileSlot):
 	elif(Mode == 2):
 		OpenSave();
 	elif(Mode == 3):
+		DeleteSave()
 		SaveFile();
 	elif(Mode == 4):
-		DeleteFile();
+		DeleteSave();
 
 # Działa 100%
 func ScanSave():
@@ -80,14 +81,22 @@ func SaveFile():
 	# Get tree of project to chainge scenes(cuz it's not any object)
 	var tree = Engine.get_main_loop() as SceneTree
 	
+	print_debug("Saving")
+	
 	var file = FileAccess.open(SaveFolder + FileSlotGlob + ".SAVE", FileAccess.WRITE)
 	if(file != null):
 		# Zapisz pokój
-		file.overwrite_line(SaveFolder + FileSlotGlob + ".SAVE", 0, tree.current_scene)
+		print_debug("Saving scene to: ", tree.current_scene.scene_file_path)
+		
+		file.store_string(str(tree.current_scene.scene_file_path))
+		file.store_string("\n")
+		# Bench Id
+		file.store_string("NULL")
+		file.store_string("\n")
 		
 		file.close()
 
 # Działa 100%
-func DeleteFile():
+func DeleteSave():
 	# Delete save
 	DirAccess.remove_absolute(SaveFolder + FileSlotGlob + ".SAVE")

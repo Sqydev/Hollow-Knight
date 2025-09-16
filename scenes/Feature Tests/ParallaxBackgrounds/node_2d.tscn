@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2ac0tci4q4s2"]
+[gd_scene load_steps=6 format=3 uid="uid://b2ac0tci4q4s2"]
 
 [ext_resource type="Script" uid="uid://bqo77s1ienpcl" path="res://scenes/Feature Tests/ParallaxBackgrounds/camera_2d.gd" id="2_ctywe"]
 [ext_resource type="Texture2D" uid="uid://ko2h2g3aff6y" path="res://sprites/placeholders/parallax-placeholder.png" id="2_l6ahu"]
@@ -6,6 +6,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6ahu"]
 size = Vector2(267, 187)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_l6ahu"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -26,7 +28,18 @@ shape = SubResource("RectangleShape2D_l6ahu")
 [node name="Other" type="Node2D" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Other"]
-scroll_base_scale = Vector2(0.7, 0.7)
+scroll_base_scale = Vector2(0.8, 0.8)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Other/ParallaxBackground"]
+material = SubResource("CanvasItemMaterial_l6ahu")
+motion_scale = Vector2(0.91, 0.91)
+
+[node name="Node2D" type="Node2D" parent="Other/ParallaxBackground/ParallaxLayer2"]
+
+[node name="Parallax-placeholder" type="Sprite2D" parent="Other/ParallaxBackground/ParallaxLayer2/Node2D"]
+light_mask = 512
+position = Vector2(-153, -373)
+texture = ExtResource("2_l6ahu")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Other/ParallaxBackground"]
 

@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2ac0tci4q4s2"]
+
+[ext_resource type="Script" uid="uid://bqo77s1ienpcl" path="res://scenes/Feature Tests/ParallaxBackgrounds/camera_2d.gd" id="2_ctywe"]
+[ext_resource type="Texture2D" uid="uid://ko2h2g3aff6y" path="res://sprites/placeholders/parallax-placeholder.png" id="2_l6ahu"]
+[ext_resource type="Texture2D" uid="uid://bq6aptrixplje" path="res://sprites/placeholders/platform-placeholder.jpg" id="3_l6ahu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6ahu"]
+size = Vector2(267, 187)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms"]
+position = Vector2(0, -188)
+scale = Vector2(11.2595, 1.08309)
+
+[node name="Platform-placeholder" type="Sprite2D" parent="Platforms/StaticBody2D"]
+position = Vector2(-5, 682)
+texture = ExtResource("3_l6ahu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D"]
+position = Vector2(-4.5, 681.5)
+shape = SubResource("RectangleShape2D_l6ahu")
+
+[node name="Other" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Other"]
+scroll_base_scale = Vector2(0.7, 0.7)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Other/ParallaxBackground"]
+
+[node name="Parallax-placeholder" type="Sprite2D" parent="Other/ParallaxBackground/ParallaxLayer"]
+position = Vector2(1.99997, -1.99997)
+scale = Vector2(0.589352, 0.589352)
+texture = ExtResource("2_l6ahu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.49, 0.49)
+script = ExtResource("2_ctywe")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bq6aptrixplje" path="res://sprites/placeholders/platform-placeholder.jpg" id="1_1ur55"]
 [ext_resource type="AudioStream" uid="uid://c5pi4f0te5if1" path="res://audio/placeholders/whistle.mp3" id="2_idwqm"]
-[ext_resource type="Script" uid="uid://qw142ufmu2m4" path="res://scenes/Game/Levels/color_rect.gd" id="2_mxjbo"]
+[ext_resource type="Script" uid="uid://qw142ufmu2m4" path="res://scripts/Other/color_rect.gd" id="2_mxjbo"]
 
 [node name="Tutorial" type="Node2D"]
 

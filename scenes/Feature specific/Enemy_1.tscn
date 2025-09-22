@@ -11,3 +11,13 @@ script = ExtResource("1_ag3rr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_nqy5t")
+
+[node name="Ray_left" type="RayCast2D" parent="."]
+position = Vector2(21, -5)
+target_position = Vector2(9, 19)
+collision_mask = 8
+
+[node name="Ray_right" type="RayCast2D" parent="."]
+position = Vector2(-21, -5)
+target_position = Vector2(-9, 18)
+collision_mask = 8

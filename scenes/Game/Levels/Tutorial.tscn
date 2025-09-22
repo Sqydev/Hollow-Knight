@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6dh6pjq6rvi5"]
+
+[ext_resource type="Texture2D" uid="uid://bq6aptrixplje" path="res://sprites/placeholders/platform-placeholder.jpg" id="1_1ur55"]
+[ext_resource type="AudioStream" uid="uid://c5pi4f0te5if1" path="res://audio/placeholders/whistle.mp3" id="2_idwqm"]
+[ext_resource type="Script" uid="uid://qw142ufmu2m4" path="res://scripts/Other/color_rect.gd" id="2_mxjbo"]
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="Platform-placeholder" type="Sprite2D" parent="."]
+position = Vector2(-1, 2)
+texture = ExtResource("1_1ur55")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Platform-placeholder"]
+stream = ExtResource("2_idwqm")
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -592.0
+offset_top = -336.0
+offset_right = -552.0
+offset_bottom = -296.0
+scale = Vector2(29.52, 16.88)
+color = Color(0, 0, 0, 1)
+script = ExtResource("2_mxjbo")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="finished" from="Platform-placeholder/AudioStreamPlayer2D" to="ColorRect" method="_on_audio_stream_player_2d_finished"]

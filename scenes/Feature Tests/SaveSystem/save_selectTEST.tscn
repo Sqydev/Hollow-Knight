@@ -1,0 +1,102 @@
+[gd_scene load_steps=4 format=3 uid="uid://bivumjq66hiij"]
+
+[ext_resource type="Script" uid="uid://c8u6wmv13b8vw" path="res://scripts/Menu/save_select.gd" id="1_62v6t"]
+[ext_resource type="PackedScene" uid="uid://dfdxq0eh7koi1" path="res://scenes/Menu/Backgrounds/MenuBackground.tscn" id="2_ibr6a"]
+[ext_resource type="Script" uid="uid://voqmnyevstfm" path="res://scripts/Feature Tests/Saves/BUTT.gd" id="3_ibr6a"]
+
+[node name="SaveSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_62v6t")
+
+[node name="MenuBackground" parent="." instance=ExtResource("2_ibr6a")]
+layout_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.17
+anchor_right = 0.7
+anchor_bottom = 0.25
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SAVE Creation TEST"
+script = ExtResource("3_ibr6a")
+metadata/meta = 1
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.17
+anchor_right = 0.7
+anchor_bottom = 0.25
+offset_left = -5.60001
+offset_top = 88.84
+offset_right = 2.39996
+offset_bottom = 96.84
+grow_horizontal = 2
+grow_vertical = 2
+text = "SAVE Load TEST"
+script = ExtResource("3_ibr6a")
+metadata/meta = 2
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.17
+anchor_right = 0.7
+anchor_bottom = 0.25
+offset_left = -1.60001
+offset_top = 195.84
+offset_right = 6.39996
+offset_bottom = 203.84
+grow_horizontal = 2
+grow_vertical = 2
+text = "SAVE Delete TEST"
+script = ExtResource("3_ibr6a")
+metadata/meta = 4
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.17
+anchor_right = 0.7
+anchor_bottom = 0.25
+offset_left = -0.600006
+offset_top = 294.84
+offset_right = 7.39996
+offset_bottom = 302.84
+grow_horizontal = 2
+grow_vertical = 2
+text = "SAVE Check TEST"
+script = ExtResource("3_ibr6a")
+metadata/meta = 0
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.17
+anchor_right = 0.7
+anchor_bottom = 0.25
+offset_left = 2.39999
+offset_top = 384.84
+offset_right = 10.4
+offset_bottom = 392.84
+grow_horizontal = 2
+grow_vertical = 2
+text = "SAVE save TEST"
+script = ExtResource("3_ibr6a")
+metadata/meta = 3

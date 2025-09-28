@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfdxq0eh7koi1"]
+
+[ext_resource type="Texture2D" uid="uid://dpxihqqw3htdv" path="res://sprites/Menu/Voidheart_menu_BG.png" id="1_hrlpp"]
+
+[sub_resource type="Gradient" id="Gradient_dat5r"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nllg3"]
+gradient = SubResource("Gradient_dat5r")
+width = 310
+
+[sub_resource type="Gradient" id="Gradient_5g0dw"]
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_p4l4v"]
+gradient = SubResource("Gradient_5g0dw")
+width = 310
+
+[node name="MenuBackground" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BgOfBg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1112.0
+offset_bottom = -608.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(28.8, 16.2)
+color = Color(0, 0, 0, 1)
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.181
+anchor_right = 0.821
+anchor_bottom = 1.0
+offset_left = -0.512009
+offset_top = -0.092
+offset_right = 1310.21
+offset_bottom = 1148.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("1_hrlpp")
+
+[node name="Fade out left" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.151
+anchor_bottom = 1.0
+offset_right = 0.751709
+offset_bottom = -1756.59
+scale = Vector2(1, 45)
+texture = SubResource("GradientTexture1D_nllg3")
+
+[node name="Fade out right" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.849
+anchor_right = 1.0
+anchor_bottom = 1.002
+offset_left = -0.752319
+offset_right = -0.000488281
+offset_bottom = -1760.19
+grow_horizontal = 0
+scale = Vector2(1, 45)
+texture = SubResource("GradientTexture1D_p4l4v")

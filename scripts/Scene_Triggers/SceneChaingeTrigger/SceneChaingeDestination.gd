@@ -10,6 +10,3 @@ func _ready() -> void:
 	if(Knight.get_meta("SendFromId") == self.get_meta("ReciveId")):
 		Knight.position = self.position
 		Knight.set_meta("SendFromId", -1)
-
-func _process(delta: float) -> void:
-	pass

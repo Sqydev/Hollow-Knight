@@ -6,9 +6,6 @@ extends Node2D
 func _ready() -> void:
 	Trigger.body_entered.connect(FilterToPlayer)
 
-func _process(delta: float) -> void:
-	pass
-
 func FilterToPlayer(body):
 	if body.name != "The Knight":
 		return

@@ -25,5 +25,5 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-func deal_damage(damage):
+func deal_damage(damage: int):
 	hp = hp - damage

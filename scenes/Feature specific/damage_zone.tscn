@@ -4,3 +4,5 @@
 
 [node name="DamageZone" type="Area2D"]
 script = ExtResource("1_b5i7p")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

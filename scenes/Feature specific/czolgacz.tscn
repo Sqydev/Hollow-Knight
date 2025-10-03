@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfmjj3ua0eflt"]
+
+[ext_resource type="Script" uid="uid://boq55g4636rui" path="res://scripts/Other/czolgacz.gd" id="1_6fd37"]
+[ext_resource type="PackedScene" uid="uid://b7xrdcdufj560" path="res://scenes/Feature specific/damage_zone.tscn" id="1_rls3x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rls3x"]
+size = Vector2(26, 21)
+
+[node name="czolgacz" type="Node2D"]
+script = ExtResource("1_6fd37")
+metadata/damage = 1
+metadata/healthpoints = 8
+
+[node name="DamageZone" parent="." instance=ExtResource("1_rls3x")]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone"]
+shape = SubResource("RectangleShape2D_rls3x")
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(27, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(-27, 0)

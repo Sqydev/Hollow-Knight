@@ -1,0 +1,98 @@
+[33mcommit afe58b4ca7b20f5675d55758b3f6815d202e37b7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32moponent[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 22a250b a1dfd32
+Author: _Sqyd_ <138494523+Sqydev@users.noreply.github.com>
+Date:   Mon Sep 15 14:11:27 2025 +0200
+
+    Merge pull request #3 from Sqydev/maptest
+
+[33mcommit a1dfd32370898a05a4a04cbcf47c2d8e7b2e3474[m
+Author: Mint <mici5dabestpl@gmail.com>
+Date:   Mon Sep 15 14:03:09 2025 +0200
+
+    Moved placeholders into their respective folders to meet sqyd's requirements.
+
+[33mcommit 770626b18aa3be838fcf9fbc17a863f3ac403f49[m
+Author: Mint <mici5dabestpl@gmail.com>
+Date:   Thu Sep 11 20:10:48 2025 +0200
+
+    Added a sample map, placeholder files, and *tried* to add the scene change triggers
+
+[33mcommit 4a1e6bf1b684ba18e383dcf416aa21df7460e3b8[m
+Merge: c03a22b 22a250b
+Author: Mint <mici5dabestpl@gmail.com>
+Date:   Thu Sep 11 19:36:42 2025 +0200
+
+    Merge remote-tracking branch 'origin' into maptest
+
+[33mcommit 22a250ba6c6fdbea90150a48350e16c1839d34f8[m
+Merge: 2bac8d0 543835a
+Author: _Sqyd_ <138494523+Sqydev@users.noreply.github.com>
+Date:   Thu Sep 11 19:04:42 2025 +0200
+
+    Merge pull request #1 from Sqydev/scene_chainge_trr
+
+[33mcommit c03a22b8683a672c1f68d9d00d0f9f309ef5dd53[m
+Author: Mint <mici5dabestpl@gmail.com>
+Date:   Thu Sep 11 18:44:52 2025 +0200
+
+    Added a sample scene and a few placeholders
+
+[33mcommit 543835a1dd041a8e23fb16a4b64e9532cd0ec2f3[m[33m ([m[1;31morigin/scene_chainge_trr[m[33m)[m
+Author: Sqyd <wojkap10@proton.me>
+Date:   Thu Sep 11 16:14:43 2025 +0200
+
+    This is the end.
+
+[33mcommit c49345285dd61b6faf101e926d7a849bad803192[m
+Author: Sqyd <wojkap10@proton.me>
+Date:   Thu Sep 11 14:47:08 2025 +0200
+
+    Pull request next 2
+
+[33mcommit 462600963c13c4f324c7678df1d133a420153452[m
+Author: Sqyd <wojkap10@proton.me>
+Date:   Thu Sep 11 14:42:14 2025 +0200
+
+    Pull request next'
+
+[33mcommit c03ddafa1ce847e4c424c8fa498b70217bd1c7f9[m
+Author: Sqyd <wojkap10@proton.me>
+Date:   Thu Sep 11 13:16:21 2025 +0200
+
+    Start
+
+[33mcommit 2bac8d08a545d8e810cc29b8f74f64a22994f333[m[33m ([m[1;31morigin/oponent[m[33m)[m
+Author: _Sqyd_ <138494523+Sqydev@users.noreply.github.com>
+Date:   Tue Sep 9 21:46:19 2025 +0200
+
+    Update README.md
+
+[33mcommit e508b32ee7107ca99b3b4afe8532a72427052085[m
+Author: Sqyd <wojkap10@proton.me>
+Date:   Tue Sep 9 19:30:39 2025 +0200
+
+    Seted it up for reals
+
+[33mcommit 9e77acd066fb5d63d9d889a7427815a9a7bca0e7[m
+Author: Sqyd <wojkap10@proton.me>
+Date:   Tue Sep 9 19:28:25 2025 +0200
+
+    Seted it up
+
+[33mcommit b2bddb75cbec1c1a653c9cc9a8a542fb41b932b9[m
+Author: Sqyd <wojkap10@proton.me>
+Date:   Tue Sep 9 19:21:18 2025 +0200
+
+    RM
+
+[33mcommit 0dcb1124614ce7ed15730f1707d9d13ad4a94ba1[m
+Author: Sqyd <wojkap10@proton.me>
+Date:   Tue Sep 9 19:17:10 2025 +0200
+
+    Done better LICENCE
+
+[33mcommit ed8a1c4d3956943d1e3f3af713a822867959e53d[m
+Author: Sqyd <wojkap10@proton.me>
+Date:   Tue Sep 9 19:12:17 2025 +0200
+
+    Init

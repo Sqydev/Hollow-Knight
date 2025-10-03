@@ -4,6 +4,7 @@
 size = Vector2(33, 80)
 
 [node name="The Knight" type="CharacterBody2D"]
+collision_mask = 2
 metadata/SendFromId = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
